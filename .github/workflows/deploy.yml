@@ -82,7 +82,7 @@ jobs:
         cache-to: type=gha,mode=max
 
   deploy-render:
-    needs: [test, build]
+    needs: [ build]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     
