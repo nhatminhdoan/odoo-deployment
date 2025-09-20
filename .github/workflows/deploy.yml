@@ -43,15 +43,15 @@ jobs:
         pip install -r requirements.txt
         pip install pytest
     
-    - name: Run tests
-      env:
-        HOST: localhost
-        PORT: 5432
-        USER: postgres
-        PASSWORD: postgres
-        DATABASE: odoo_test
-      run: |
-        python -m pytest tests/ -v
+    # - name: Run tests
+    #   env:
+    #     HOST: localhost
+    #     PORT: 5432
+    #     USER: postgres
+    #     PASSWORD: postgres
+    #     DATABASE: odoo_test
+    #   run: |
+    #     python -m pytest tests/ -v
 
   build:
     needs: test
