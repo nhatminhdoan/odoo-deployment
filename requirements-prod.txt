@@ -1,0 +1,56 @@
+# Production requirements cho Odoo deployment
+# Dựa trên requirements.txt gốc với một số tối ưu hóa
+
+# Core dependencies
+Babel==2.9.1
+chardet==4.0.0
+cryptography==42.0.8
+decorator==4.4.2
+docutils==0.16
+ebaysdk==2.1.5
+gevent==24.2.1
+greenlet==3.0.3
+idna==2.10
+Jinja2==3.1.2
+libsass==0.22.0
+lxml==5.2.1
+lxml-html-clean
+MarkupSafe==2.1.5
+num2words==0.5.9
+ofxparse==0.21
+passlib==1.7.4
+Pillow==10.2.0
+polib==1.1.0
+psutil==5.9.8
+psycopg2==2.9.9
+pydot==1.4.2
+pyopenssl==24.1.0
+PyPDF2==2.12.1
+pyserial==3.5
+python-dateutil==2.8.1
+python-ldap==3.4.4
+python-stdnum==1.16
+pytz
+pyusb==1.2.1
+qrcode==6.1
+reportlab==4.1.0
+requests==2.31.0
+urllib3==2.0.7
+vobject==0.9.6.1
+Werkzeug==2.0.2
+xlrd==1.2.0
+XlsxWriter==1.1.2
+xlwt==1.3.0
+zeep==4.0.0
+
+# Production specific dependencies
+gunicorn==21.2.0
+redis==5.0.1
+psycopg2-binary==2.9.9
+
+# Monitoring và logging
+sentry-sdk[flask]==1.38.0
+prometheus-client==0.19.0
+
+# Security
+cryptography==42.0.8

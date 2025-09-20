@@ -1,0 +1,39 @@
+# render.yaml - Cấu hình cho Render deployment
+services:
+  - type: web
+    name: odoo-app
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: HOST
+        fromDatabase:
+          name: odoo-db
+          property: host
+      - key: PORT
+        fromDatabase:
+          name: odoo-db
+          property: port
+      - key: USER
+        fromDatabase:
+          name: odoo-db
+          property: user
+      - key: PASSWORD
+        fromDatabase:
+          name: odoo-db
+          property: password
+      - key: DATABASE
+        fromDatabase:
+          name: odoo-db
+          property: database
+    healthCheckPath: /web/health
+    autoDeploy: true
+
+  - type: pserv
+    name: odoo-db
+    env: postgresql
+    runtime: postgresql
+    plan: starter
+    region: singapore
+    databaseName: odoo
+    databaseUser: odoo
+    autoDeploy: true

@@ -1,0 +1,30 @@
+{
+  "name": "Odoo ERP",
+  "description": "Odoo ERP System",
+  "repository": "https://github.com/your-username/odoo",
+  "logo": "https://www.odoo.com/web/image/website/1/logo",
+  "keywords": ["odoo", "erp", "python"],
+  "stack": "heroku-22",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:mini"
+    }
+  ],
+  "env": {
+    "PYTHONPATH": {
+      "description": "Python path for Odoo",
+      "value": "/app"
+    }
+  }
+}
